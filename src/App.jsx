@@ -1,16 +1,16 @@
 import './App.css';
-import Header from './components/Header'; 
-import ImageGallery from './components/imageg';
-import GallaryFooter from './components/GallaryFooter';
-import imageData from './components/imageData';
+import DataComponent from './components/DataComponent';
 
 function App() {
   return (
-    <div>
-      <Header />
-      <ImageGallery imageData={imageData} />
-      <GallaryFooter />
+    <> 
+      <h1>KALVIUM GALLERY</h1> 
+      <div className="app_1">
+      {DataComponent.map((elephnt)=>{
+        return <img src={elephnt.img} alt="elephant" key={elephnt.id}/>
+      })}
     </div>
+    </>
   );
 }
 
